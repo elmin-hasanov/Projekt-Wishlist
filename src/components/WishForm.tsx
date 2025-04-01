@@ -21,7 +21,7 @@ function WishForm({ setWishes }: WishFormProps) {
       priority: prioritySelectValue,
     };
     console.log(newWish);
-    setWishes((oldWishes) => [...oldWishes, newWish]);
+    setWishes((oldWishes) => [newWish, ...oldWishes]);
     setWishInputValue("");
   };
 
@@ -33,7 +33,7 @@ function WishForm({ setWishes }: WishFormProps) {
           value={wishInputValue}
           onChange={(e) => setWishInputValue(e.target.value)}
           className="flex-1 px-2 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Add a new wish..."
+          placeholder="Add a new todo..."
         />
         <select
           onChange={(e) => {
