@@ -47,9 +47,11 @@ function App() {
   };
 
   return (
-    <div className="App min-h-screen bg-gray-900 text-gray-100 p-8">
+    <div className="App min-h-screen bg-gray-900 text-gray-100 p-4">
       <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">To-do-Liste</h1>
+        <h1 className="text-3xl font-bold text-center mb-4 text-gray-300">
+          ToDo-List 📋
+        </h1>
         <WishForm setWishes={setWishes} />
         <WishList
           changeWishFulfillment={changeWishFulfillment}

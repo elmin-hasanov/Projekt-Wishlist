@@ -1,7 +1,5 @@
 import { Wish } from "../App";
 
-import "./WishItem.css";
-
 type WishItemProps = {
   wish: Wish;
   deleteWish: (id: string) => void;
@@ -38,14 +36,14 @@ export default function WishItem({
         } ${
           wish.priority === "high"
             ? "border-l-4 border-red-500 pl-2"
-            : "border-l-4 border-green-500 pl-2"
+            : "border-l-4 border-green-500 pl-3"
         }`}
       >
         {wish.title}
       </span>
       <button
         onClick={handleDeleteClick}
-        className="px-3 py-1 text-red-400 hover:text-red-300 rounded-md hover:bg-gray-600/50 transition-colors"
+        className="px-2 py-1 bg-gray-800 text-red-400 hover:text-red-300 rounded-md hover:bg-gray-600/50 transition-colors"
       >
         Delete
       </button>

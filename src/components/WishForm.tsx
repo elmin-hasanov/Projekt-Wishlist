@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Wish } from "../App";
-import "./WishForm.css";
 
 type WishFormProps = {
   setWishes: React.Dispatch<React.SetStateAction<Wish[]>>;
@@ -27,13 +26,13 @@ function WishForm({ setWishes }: WishFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-8">
-      <div className="flex gap-2 mb-2">
+    <form onSubmit={handleSubmit} className="mb-4">
+      <div className="flex gap-2 mb-3">
         <input
           type="text"
           value={wishInputValue}
           onChange={(e) => setWishInputValue(e.target.value)}
-          className="flex-1 px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="flex-1 px-2 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Add a new wish..."
         />
         <select
@@ -42,7 +41,7 @@ function WishForm({ setWishes }: WishFormProps) {
               setPrioritySelectValue(e.target.value);
             }
           }}
-          className="px-4 py-2 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="px-2 py-4 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="low">Low</option>
           <option value="high">High</option>
@@ -50,9 +49,10 @@ function WishForm({ setWishes }: WishFormProps) {
       </div>
       <button
         disabled={wishInputValue.trim().length === 0}
-        className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
+        className="w-full py-4 px-4 bg-blue-600 hover:bg-blue-700 rounded-lg
+        font-bold transition-colors disabled:bg-gray-700 disabled:cursor-not-allowed"
       >
-        Add wish
+        Add wish +
       </button>
     </form>
   );

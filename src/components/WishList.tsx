@@ -1,6 +1,5 @@
 import { Wish } from "../App";
 import WishItem from "./WishItem";
-import "./WishList.css";
 
 type WishListProps = {
   wishes: Wish[];
